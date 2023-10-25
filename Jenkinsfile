@@ -7,6 +7,12 @@ pipeline {
       }
     }
 
+    stage('stage2') {
+      steps {
+        echo 'hello world'
+      }
+    }
+
   }
   environment {
     enr = 'pid'
