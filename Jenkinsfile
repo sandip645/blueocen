@@ -13,6 +13,12 @@ pipeline {
       }
     }
 
+    stage('stage3') {
+      steps {
+        sleep 180
+      }
+    }
+
   }
   environment {
     enr = 'pid'
