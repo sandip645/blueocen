@@ -17,7 +17,7 @@ pipeline {
 
         stage('stage2.1') {
           steps {
-            sh '''whomami
+            sh '''
 ls
 date
 df
