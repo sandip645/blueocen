@@ -8,8 +8,23 @@ pipeline {
     }
 
     stage('stage2') {
-      steps {
-        echo 'hello world'
+      parallel {
+        stage('stage2') {
+          steps {
+            echo 'hello world'
+          }
+        }
+
+        stage('stage2.1') {
+          steps {
+            sh '''whomami
+ls
+date
+df
+'''
+          }
+        }
+
       }
     }
 
